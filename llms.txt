@@ -1,0 +1,39 @@
+# Restacked - Context Index
+
+## Start Here
+- INTENT-BUILD-RESTACKED.md - Read this first. Always. Full project context in one file.
+
+## Core Context
+- STACK.md - Build tools, MCP server, GitHub integration, deployment targets, what is not in scope.
+- ARCHITECTURE.md - Three-layer model, session flow, bootstrap flow, self-improvement loop, file ownership.
+- DOMAIN.md - Terminology, business rules, user types, non-negotiables.
+- UX-PATTERNS.md - "Make it so" trigger, all user flows, onboarding site, error states, anti-patterns.
+- AUTH.md - PAT prototype, OAuth launch plan, GitHub identity model, permission model.
+- COMPETITORS.md - What exists, what each tool does well, what to avoid, pricing reference points.
+
+## How To Use This Context
+1. Read INTENT-CONTEXT-SYSTEM.md before doing anything else.
+2. Use Layer 2 files when you need depth on a specific topic.
+3. Do not guess what is not in these files. Flag the gap instead.
+4. Reference DOMAIN.md for terminology before using any Restacked-specific terms.
+5. Reference UX-PATTERNS.md before making any decision that affects user flows.
+
+## If The Intent File Does Not Match Your Task
+1. State the new intent clearly.
+2. Read all Layer 2 files.
+3. Generate a new INTENT-[PURPOSE].md following the same format as INTENT-CONTEXT-SYSTEM.md.
+4. Do not start building until the new Intent file is confirmed by the user.
+
+## Regeneration Triggers
+- User requests updated context: regenerate affected Layer 2 files and the Intent file. Do not change unaffected files.
+- You hit a context gap: stop, flag it explicitly, propose a new or updated file, ask the user to confirm before continuing.
+- Project scope changes: regenerate INTENT-CONTEXT-SYSTEM.md and any directly affected Layer 2 files.
+
+## Key Facts to Remember
+- One MCP URL: mcp.restacked.ai
+- Trigger phrase: "make it so"
+- GitHub is the only persistence layer.
+- No dashboard. No editor. Everything happens in the AI client.
+- Vibe coders are a primary user. Plain language always. No jargon.
+- V0 is the frontend build tool. No custom React outside V0 at launch.
+- Prototype uses PAT. Launch uses GitHub OAuth.
